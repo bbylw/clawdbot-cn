@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clawdbot - 您的个人 AI 助手</title>
+    <title>Moltbot - 您的个人 AI 助手</title>
     <meta name="description" content="运行在其设备上的个人 AI 助手。支持 WhatsApp, Telegram, Slack, Discord 等多渠道接入。本地优先，隐私安全。">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -65,20 +68,23 @@
             color: #e5e5e5;
             overflow-x: hidden;
         }
-        
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #050505; 
+            background: #050505;
         }
+
         ::-webkit-scrollbar-thumb {
-            background: #333; 
+            background: #333;
             border-radius: 4px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
-            background: #FF4500; 
+            background: #FF4500;
         }
 
         .glass-panel {
@@ -94,29 +100,37 @@
         .cyber-border {
             position: relative;
         }
+
         .cyber-border::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             border-radius: inherit;
             padding: 1px;
             background: linear-gradient(45deg, #FF4500, transparent, #00F0FF);
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
             opacity: 0.5;
             transition: opacity 0.3s ease;
         }
+
         .cyber-border:hover::before {
             opacity: 1;
         }
 
         .grid-bg {
             background-size: 40px 40px;
+            -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
             mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-claw-500 selection:text-white">
 
     <!-- Navbar -->
@@ -124,7 +138,7 @@
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <span class="text-2xl">🦞</span>
-                <span class="font-display font-bold text-xl tracking-wider text-white">CLAWDBOT</span>
+                <span class="font-display font-bold text-xl tracking-wider text-white">MOLTBOT</span>
             </div>
             <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
                 <a href="#features" class="hover:text-claw transition-colors">功能特性</a>
@@ -132,8 +146,12 @@
                 <a href="#how-it-works" class="hover:text-claw transition-colors">工作原理</a>
                 <a href="#docs" class="hover:text-claw transition-colors">文档</a>
             </div>
-            <a href="https://github.com/clawdbot/clawdbot" target="_blank" class="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/5 transition-all">
-                <svg class="w-5 h-5 fill-current text-gray-300 group-hover:text-white" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/moltbot/moltbot" target="_blank"
+                class="group flex items-center gap-2 px-4 py-2 bg-white/5 hover:bg-white/10 rounded-full border border-white/5 transition-all">
+                <svg class="w-5 h-5 fill-current text-gray-300 group-hover:text-white" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
                 <span class="text-sm font-mono group-hover:text-white text-gray-300">GitHub</span>
             </a>
         </div>
@@ -143,32 +161,40 @@
     <header class="relative min-h-screen flex flex-col justify-center items-center pt-20 overflow-hidden">
         <!-- Background Effects -->
         <div class="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-claw-500/10 rounded-full blur-[100px] animate-pulse-slow"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-claw-500/10 rounded-full blur-[100px] animate-pulse-slow">
+        </div>
         <div class="absolute top-1/4 right-1/4 w-[300px] h-[300px] bg-cyber/10 rounded-full blur-[80px]"></div>
 
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6 animate-fade-in text-xs font-mono text-claw-500">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6 animate-fade-in text-xs font-mono text-claw-500">
                 <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-claw-500 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-claw-500"></span>
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-claw-500 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-claw-500"></span>
                 </span>
                 v2025.1.0 现已发布
             </div>
-            
-            <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight mb-6 text-white text-glow">
-                您的 <span class="bg-gradient-to-r from-claw-500 to-yellow-500 bg-clip-text text-transparent">个人</span><br>
+
+            <h1
+                class="font-display font-bold text-5xl md:text-7xl lg:text-8xl tracking-tight mb-6 text-white text-glow">
+                您的 <span
+                    class="bg-gradient-to-r from-claw-500 to-yellow-500 bg-clip-text text-transparent">个人</span><br>
                 AI 智能助手
             </h1>
-            
+
             <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
                 在您现有的所有设备和渠道上运行。<br>本地优先，极速响应，永远在线。
                 <br>
-                <span class="text-sm font-mono text-claw-600 mt-2 block opacity-75">// EXFOLIATE! EXFOLIATE! 蜕壳进化！</span>
+                <span class="text-sm font-mono text-claw-600 mt-2 block opacity-75">// EXFOLIATE! EXFOLIATE!
+                    蜕壳进化！</span>
             </p>
 
             <!-- Install Terminal -->
             <div class="max-w-2xl mx-auto w-full mb-12 group">
-                <div class="glass-panel rounded-xl overflow-hidden shadow-2xl shadow-claw-900/20 cyber-border text-left">
+                <div
+                    class="glass-panel rounded-xl overflow-hidden shadow-2xl shadow-claw-900/20 cyber-border text-left">
                     <div class="bg-black/40 px-4 py-2 flex items-center gap-2 border-b border-white/5">
                         <div class="flex gap-1.5">
                             <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
@@ -178,19 +204,29 @@
                         <span class="text-xs font-mono text-gray-500 ml-2">bash — node ≥22</span>
                     </div>
                     <div class="p-4 sm:p-6 font-mono text-sm sm:text-base flex items-center justify-between gap-4">
-                        <code class="text-cyber">npm install -g clawdbot@latest && clawdbot onboard</code>
-                        <button onclick="navigator.clipboard.writeText('npm install -g clawdbot@latest && clawdbot onboard')" class="text-gray-500 hover:text-white transition-colors" title="Copy">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                        <code class="text-cyber">npm install -g moltbot@latest && moltbot onboard</code>
+                        <button
+                            onclick="navigator.clipboard.writeText('npm install -g moltbot@latest && moltbot onboard')"
+                            class="text-gray-500 hover:text-white transition-colors" title="Copy">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                </path>
+                            </svg>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Badges -->
-            <div class="flex flex-wrap justify-center gap-3 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                <img src="https://img.shields.io/github/actions/workflow/status/clawdbot/clawdbot/ci.yml?branch=main&style=flat-square&color=222" alt="CI status" class="h-6">
-                <img src="https://img.shields.io/github/v/release/clawdbot/clawdbot?include_prereleases&style=flat-square&color=FF4500" alt="GitHub release" class="h-6">
-                <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&color=333" alt="MIT License" class="h-6">
+            <div
+                class="flex flex-wrap justify-center gap-3 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <img src="https://img.shields.io/github/actions/workflow/status/moltbot/moltbot/ci.yml?branch=main&style=flat-square&color=222"
+                    alt="CI status" class="h-6">
+                <img src="https://img.shields.io/github/v/release/moltbot/moltbot?include_prereleases&style=flat-square&color=FF4500"
+                    alt="GitHub release" class="h-6">
+                <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&color=333"
+                    alt="MIT License" class="h-6">
             </div>
         </div>
     </header>
@@ -199,12 +235,17 @@
     <section id="features" class="py-24 relative bg-dark-surface/50">
         <div class="container mx-auto px-6">
             <h2 class="font-display text-4xl font-bold mb-16 text-center">核心亮点<span class="text-claw-500">.</span></h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Feature 1 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-claw-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-claw-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-claw-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-claw-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">本地优先网关</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">统一的控制平面，管理会话、渠道、工具和事件。所有数据掌控在您手中。</p>
@@ -212,17 +253,28 @@
 
                 <!-- Feature 2 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-cyber/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-cyber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-cyber/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-cyber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">多渠道收件箱</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">WhatsApp, Telegram, Slack, Discord... 所有消息汇聚一处，无需切换应用。</p>
+                    <p class="text-gray-400 leading-relaxed text-sm">WhatsApp, Telegram, Slack, Discord...
+                        所有消息汇聚一处，无需切换应用。</p>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">多 Agent 路由</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">将不同的渠道、账户或联系人路由到隔离的 Agent（工作区 + 独立会话）。</p>
@@ -230,17 +282,28 @@
 
                 <!-- Feature 4 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">语音唤醒 & 实时交谈</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">支持 macOS/iOS/Android 的始终在线语音功能 (Talk Mode)，体验自然的语音交互。</p>
+                    <p class="text-gray-400 leading-relaxed text-sm">支持 macOS/iOS/Android 的始终在线语音功能 (Talk
+                        Mode)，体验自然的语音交互。</p>
                 </div>
 
                 <!-- Feature 5 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">Live Canvas</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">由 Agent 驱动的可视化工作区，支持 A2UI，让 AI 不仅能说，还能展示。</p>
@@ -248,8 +311,15 @@
 
                 <!-- Feature 6 -->
                 <div class="group glass-panel rounded-2xl p-8 hover:bg-white/5 transition-all cyber-border">
-                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div
+                        class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="font-display text-xl font-bold mb-3">技能 & 生态</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">内置浏览器控制、定时任务、Webhooks。支持技能市场 (ClawdHub)，无限扩展能力。</p>
@@ -264,7 +334,8 @@
             <h2 class="font-display text-2xl font-bold text-gray-500 uppercase tracking-widest">Connect Anywhere</h2>
         </div>
         <div class="relative w-full flex">
-            <div class="flex animate-marquee whitespace-nowrap gap-12 text-3xl font-display font-bold text-gray-700 select-none">
+            <div
+                class="flex animate-marquee whitespace-nowrap gap-12 text-3xl font-display font-bold text-gray-700 select-none">
                 <span class="hover:text-green-500 transition-colors">WhatsApp</span>
                 <span class="hover:text-blue-400 transition-colors">Telegram</span>
                 <span class="hover:text-purple-500 transition-colors">Discord</span>
@@ -298,7 +369,7 @@
             <div class="lg:w-1/2">
                 <h2 class="font-display text-4xl font-bold mb-6">工作原理</h2>
                 <p class="text-gray-400 mb-8 text-lg">
-                    Clawdbot 的核心是运行在您本地机器上的 Web Socket 网关。它充当所有客户端、工具和事件的统一控制平面。
+                    Moltbot 的核心是运行在您本地机器上的 Web Socket 网关。它充当所有客户端、工具和事件的统一控制平面。
                 </p>
                 <ul class="space-y-4 font-mono text-sm text-gray-400">
                     <li class="flex items-center gap-3">
@@ -319,11 +390,12 @@
                     </li>
                 </ul>
             </div>
-            
+
             <!-- Technical Graphic / ASCIImulation -->
             <div class="lg:w-1/2 w-full">
                 <div class="glass-panel p-1 rounded-xl cyber-border bg-black">
-                    <div class="bg-gray-900 rounded-lg p-6 font-mono text-xs sm:text-sm text-green-400 overflow-x-auto shadow-inner">
+                    <div
+                        class="bg-gray-900 rounded-lg p-6 font-mono text-xs sm:text-sm text-green-400 overflow-x-auto shadow-inner">
                         <pre>WhatsApp / Telegram / Slack / ...
              │
              ▼
@@ -334,7 +406,7 @@
 └──────────────┬────────────────┘
                │
                ├─ Pi Agent (RPC)
-               ├─ CLI (clawdbot …)
+               ├─ CLI (moltbot …)
                ├─ WebChat UI
                ├─ macOS App
                └─ iOS / Android Nodes</pre>
@@ -351,21 +423,26 @@
                 <div>
                     <h2 class="font-display text-3xl font-bold mb-6">快速入门</h2>
                     <div class="prose prose-invert">
-                        <p class="text-gray-400">推荐使用 <code class="text-claw-500">clawdbot onboard</code> 向导。它将引导您完成网关、工作区、渠道和技能的配置。</p>
+                        <p class="text-gray-400">推荐使用 <code class="text-claw-500">moltbot onboard</code>
+                            向导。它将引导您完成网关、工作区、渠道和技能的配置。</p>
                         <p class="text-gray-400">支持的模型订阅 (OAuth):</p>
                         <ul class="list-none pl-0 space-y-2 mt-4">
-                            <li class="flex items-center gap-2"><span class="text-claw-500">➜</span> Anthropic (Claude Pro/Max) - <span class="text-xs bg-white/10 px-2 py-0.5 rounded text-yellow-300">强烈推荐</span></li>
-                            <li class="flex items-center gap-2"><span class="text-cyber">➜</span> OpenAI (ChatGPT/Codex)</li>
+                            <li class="flex items-center gap-2"><span class="text-claw-500">➜</span> Anthropic (Claude
+                                Pro/Max) - <span
+                                    class="text-xs bg-white/10 px-2 py-0.5 rounded text-yellow-300">强烈推荐</span></li>
+                            <li class="flex items-center gap-2"><span class="text-cyber">➜</span> OpenAI (ChatGPT/Codex)
+                            </li>
                         </ul>
                     </div>
                     <div class="mt-8">
-                        <a href="https://docs.clawd.bot" class="inline-block bg-white text-black font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors">
+                        <a href="https://docs.molt.bot"
+                            class="inline-block bg-white text-black font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition-colors">
                             查看完整文档
                         </a>
                     </div>
                 </div>
                 <div>
-                     <div class="bg-black/50 border border-white/10 rounded-xl p-6 font-mono text-sm">
+                    <div class="bg-black/50 border border-white/10 rounded-xl p-6 font-mono text-sm">
                         <div class="flex gap-2 mb-4">
                             <div class="w-3 h-3 rounded-full bg-red-500"></div>
                             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -373,18 +450,21 @@
                         </div>
                         <div class="space-y-4">
                             <div class="group">
-                                <span class="text-gray-500">$</span> <span class="text-white">clawdbot onboard --install-daemon</span>
+                                <span class="text-gray-500">$</span> <span class="text-white">moltbot onboard
+                                    --install-daemon</span>
                             </div>
                             <div class="group">
-                                <span class="text-gray-500">$</span> <span class="text-white">clawdbot gateway --port 18789 --verbose</span>
+                                <span class="text-gray-500">$</span> <span class="text-white">moltbot gateway --port
+                                    18789 --verbose</span>
                                 <div class="pl-4 text-gray-500 text-xs mt-1">Starting gateway control plane... OK</div>
                             </div>
                             <div class="group">
-                                <span class="text-gray-500">$</span> <span class="text-white">clawdbot agent --message "Ship checklist"</span>
+                                <span class="text-gray-500">$</span> <span class="text-white">moltbot agent --message
+                                    "Ship checklist"</span>
                                 <div class="pl-4 text-claw-400 text-xs mt-1">Agent thinking... (high)</div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -395,25 +475,27 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center gap-6">
                 <div class="flex items-center gap-2 text-2xl font-bold text-white">
-                    <span>🦞</span> CLAWDBOT
+                    <span>🦞</span> MOLTBOT
                 </div>
                 <div class="flex gap-6 uppercase tracking-wider text-xs font-medium">
-                    <a href="https://clawd.me" class="hover:text-claw-500 transition-colors">Clawd.me</a>
+                    <a href="https://molt.bot" class="hover:text-claw-500 transition-colors">Molt.bot</a>
                     <a href="https://soul.md" class="hover:text-claw-500 transition-colors">Soul.md</a>
-                    <a href="https://docs.clawd.bot" class="hover:text-claw-500 transition-colors">Documentation</a>
+                    <a href="https://docs.molt.bot" class="hover:text-claw-500 transition-colors">Documentation</a>
                 </div>
                 <p>
-                    Built for <span class="text-gray-400">Clawd</span> by Peter Steinberger and the community.<br>
+                    Built for <span class="text-gray-400">Molty</span> by Peter Steinberger and the community.<br>
                     <span class="opacity-50">Deepwiki • 111111</span>
                 </p>
                 <div class="mt-4">
-                     <a href="https://star-history.com/#clawdbot/clawdbot&Date" class="opacity-50 hover:opacity-100 transition-opacity">
-                        <img src="https://img.shields.io/github/stars/clawdbot/clawdbot?style=social" alt="GitHub stars">
-                     </a>
+                    <a href="https://star-history.com/#moltbot/moltbot&Date"
+                        class="opacity-50 hover:opacity-100 transition-opacity">
+                        <img src="https://img.shields.io/github/stars/moltbot/moltbot?style=social" alt="GitHub stars">
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
 </body>
+
 </html>
