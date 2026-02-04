@@ -120,7 +120,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 ## 亮点
 
 - **[本地优先网关](https://docs.openclaw.ai/gateway)** — 会话、渠道、工具和事件的统一控制平面。
-- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
+- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, BlueBubbles (iMessage, 推荐), iMessage (legacy), Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
 - **[多 Agent 路由](https://docs.openclaw.ai/gateway/configuration)** — 将入站渠道/账户/对等端路由到隔离的 Agent（工作区 + 每 Agent 会话）。
 - **[语音唤醒 (Voice Wake)](https://docs.openclaw.ai/nodes/voicewake) + [交谈模式 (Talk Mode)](https://docs.openclaw.ai/nodes/talk)** — macOS/iOS/Android 上的始终在线语音，支持 ElevenLabs。
 - **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — Agent 驱动的可视化工作区，支持 [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
@@ -142,7 +142,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 - [媒体管道](https://docs.openclaw.ai/nodes/images): 图像/音频/视频，转录钩子，大小限制，临时文件生命周期。音频详情：[Audio](https://docs.openclaw.ai/nodes/audio)。
 
 ### 渠道
-- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [iMessage](https://docs.openclaw.ai/channels/imessage) (imsg), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (extension), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat)。
+- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat)。
 - [群组路由](https://docs.openclaw.ai/concepts/group-messages): 提及门控，回复标签，按渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
 
 ### 应用 + Nodes
@@ -242,17 +242,17 @@ macOS 应用可以以 **node 模式** 运行，并通过网关 WebSocket 广播�
 ## Agent 对 Agent (sessions_* 工具)
 
 - 使用这些工具在会话之间协调工作，无需在聊天界面之间跳转。
-- `sessions_list` — 发视活跃会话 (Agents) 及其元数据。
+- `sessions_list` — 发现活跃会话 (Agents) 及其元数据。
 - `sessions_history` — 获取会话的转录日志。
 - `sessions_send` — 给另一个会话发消息；可选的回复 ping-pong + 宣布步骤 (`REPLY_SKIP`, `ANNOUNCE_SKIP`)。
 
 详情：[会话工具](https://docs.openclaw.ai/concepts/session-tool)
 
-## 技能注册表 (ClawdHub)
+## 技能注册表 (ClawHub)
 
-ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以自动搜索技能并在需要时拉取新技能。
+ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自动搜索技能并在需要时拉取新技能。
 
-[ClawdHub](https://ClawdHub.com)
+[ClawHub](https://clawhub.com)
 
 ## 聊天命令
 
@@ -333,7 +333,7 @@ ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以�
 ### [Telegram](https://docs.openclaw.ai/channels/telegram)
 
 - 设置 `TELEGRAM_BOT_TOKEN` 或 `channels.telegram.botToken` (环境变量优先)。
-- 可选：设置 `channels.telegram.groups` (带 `channels.telegram.groups."*".requireMention`); 设置后，它是群组允许列表 (包含 `"*"` 以允许所有)。按需设置 `channels.telegram.allowFrom` or `channels.telegram.webhookUrl`。
+- 可选：设置 `channels.telegram.groups` (带 `channels.telegram.groups."*".requireMention`); 设置后，它是群组允许列表 (包含 `"*"` 以允许所有)。按需设置 `channels.telegram.allowFrom` or `channels.telegram.webhookUrl` + `channels.telegram.webhookSecret`。
 
 ```json5
 {
@@ -366,7 +366,7 @@ ClawdHub 是一个极简的技能注册表。启用 ClawdHub 后，Agent 可以�
 
 ### [Signal](https://docs.openclaw.ai/channels/signal)
 
-- 需要 `signal-cli` e `channels.signal` 配置部分。
+- 需要 `signal-cli` 和 `channels.signal` 配置部分。
 
 ### [iMessage](https://docs.openclaw.ai/channels/imessage)
 
