@@ -49,6 +49,7 @@
 ```bash
 npm install -g openclaw@latest
 # 或者: pnpm add -g openclaw@latest
+# 或者: bun add -g openclaw@latest
 
 openclaw onboard --install-daemon
 ```
@@ -58,6 +59,8 @@ openclaw onboard --install-daemon
 ## 快速开始 (简版)
 
 运行环境：**Node ≥22**。
+
+支持包管理器：**npm / pnpm / bun**。
 
 完整新手指南（认证、配对、渠道）：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
