@@ -25,9 +25,10 @@
 
 如果您想要一个感觉本地化、快速且永远在线的个人单用户助手，这就是您的选择。
 
-[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-clawdbot) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
-首选设置方式：运行入职向导 (`openclaw onboard`)。它会引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
+首选设置方式：在终端中运行入职向导 (`openclaw onboard`)。
+向导会分步引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
 支持使用 npm, pnpm, 或 bun。
 新安装？从这里开始：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
@@ -35,7 +36,7 @@
 - **[Anthropic](https://www.anthropic.com/)** (Claude Pro/Max)
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-模型说明：虽然支持任何模型，但我强烈推荐 **Anthropic Pro/Max (100/200) + Opus 4.5**，因为它具有长上下文优势和更好的抗提示注入能力。参见 [入职指南](https://docs.openclaw.ai/start/onboarding)。
+模型说明：虽然支持任何模型，但我强烈推荐 **Anthropic Pro/Max (100/200) + Opus 4.6**，因为它具有长上下文优势和更好的抗提示注入能力。参见 [入职指南](https://docs.openclaw.ai/start/onboarding)。
 
 ## 模型 (选择 + 认证)
 
@@ -49,7 +50,6 @@
 ```bash
 npm install -g openclaw@latest
 # 或者: pnpm add -g openclaw@latest
-# 或者: bun add -g openclaw@latest
 
 openclaw onboard --install-daemon
 ```
@@ -59,8 +59,6 @@ openclaw onboard --install-daemon
 ## 快速开始 (简版)
 
 运行环境：**Node ≥22**。
-
-支持包管理器：**npm / pnpm / bun**。
 
 完整新手指南（认证、配对、渠道）：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
@@ -114,9 +112,9 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 完整安全指南：[安全](https://docs.openclaw.ai/gateway/security)
 
 默认行为在 Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack 上：
-- **私信配对** (`dmPolicy="pairing"` / `channels.discord.dm.policy="pairing"` / `channels.slack.dm.policy="pairing"`): 未知发送者会收到一个简短的配对码，机器人不会处理他们的消息。
+- **私信配对** (`dmPolicy="pairing"` / `channels.discord.dmPolicy="pairing"` / `channels.slack.dmPolicy="pairing"`; 旧版: `channels.discord.dm.policy`, `channels.slack.dm.policy`): 未知发送者会收到一个简短的配对码，机器人不会处理他们的消息。
 - 批准方式：`openclaw pairing approve <channel> <code>` (然后发送者会被添加到本地允许列表存储中)。
-- 公共入站私信需要显式选择加入：设置 `dmPolicy="open"` 并在渠道允许列表 (`allowFrom` / `channels.discord.dm.allowFrom` / `channels.slack.dm.allowFrom`) 中包含 `"*"`。
+- 公共入站私信需要显式选择加入：设置 `dmPolicy="open"` 并在渠道允许列表 (`allowFrom` / `channels.discord.allowFrom` / `channels.slack.allowFrom`; 旧版: `channels.discord.dm.allowFrom`, `channels.slack.dm.allowFrom`) 中包含 `"*"`。
 
 运行 `openclaw doctor` 来发现有风险/配置错误的私信策略。
 
@@ -312,7 +310,7 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 ```json5
 {
   agent: {
-    model: "anthropic/claude-opus-4-5"
+    model: "anthropic/claude-opus-4-6"
   }
 }
 ```
@@ -355,7 +353,7 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 ### [Discord](https://docs.openclaw.ai/channels/discord)
 
 - 设置 `DISCORD_BOT_TOKEN` or `channels.discord.token` (环境变量优先)。
-- 可选：按需设置 `commands.native`, `commands.text`, 或 `commands.useAccessGroups`, 加上 `channels.discord.dm.allowFrom`, `channels.discord.guilds`, 或 `channels.discord.mediaMaxMb`。
+- 可选：按需设置 `commands.native`, `commands.text`, 或 `commands.useAccessGroups`, 加上 `channels.discord.allowFrom`, `channels.discord.guilds`, 或 `channels.discord.mediaMaxMb`。
 
 ```json5
 {
