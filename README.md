@@ -25,7 +25,7 @@
 
 如果您想要一个感觉本地化、快速且永远在线的个人单用户助手，这就是您的选择。
 
-[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
 首选设置方式：在终端中运行入职向导 (`openclaw onboard`)。
 向导会分步引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
@@ -477,8 +477,8 @@ OpenClaw 是为 **Molty** 打造的，一只太空龙虾 AI 助手。 🦞
 欢迎提交 AI/vibe-coded PR! 🤖
 
 特别感谢 [Mario Zechner](https://mariozechner.at/) 的支持以及他的 [pi-mono](https://github.com/badlogic/pi-mono)。
-Special thanks to Adam Doppelt for lobster.bot.
+特别感谢 Adam Doppelt 为 lobster.bot 所做的贡献。
 
 感谢所有 clawtributors:
 
-(Contributors list omitted for brevity - same as EN version)
+[![clawtributors](https://contrib.rocks/image?repo=openclaw/openclaw)](https://github.com/openclaw/openclaw/graphs/contributors)
