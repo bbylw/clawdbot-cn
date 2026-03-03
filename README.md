@@ -21,7 +21,7 @@
 </p>
 
 **OpenClaw** 是一个运行在您自己设备上的**个人 AI 助手**。
-它会在您已经使用的渠道上回复您（WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, Microsoft Teams, WebChat），同时也支持 BlueBubbles, Matrix, Zalo 和 Zalo Personal 等扩展渠道。它可以在 macOS/iOS/Android 上进行语音对话，并且能够渲染一个您可控的实时 Canvas。网关（Gateway）只是控制平面——产品本身就是这个助手。
+它会在您已经使用的渠道上回复您（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、BlueBubbles、IRC、Microsoft Teams、Matrix、Feishu、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、Zalo Personal、WebChat）。它可以在 macOS/iOS/Android 上进行语音对话，并且能够渲染一个您可控的实时 Canvas。网关（Gateway）只是控制平面——产品本身就是这个助手。
 
 如果您想要一个感觉本地化、快速且永远在线的个人单用户助手，这就是您的选择。
 
@@ -34,15 +34,14 @@
 
 ## 赞助商
 
-| OpenAI                                                            | Blacksmith                                                                   |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [![OpenAI](docs/assets/sponsors/openai.svg)](https://openai.com/) | [![Blacksmith](docs/assets/sponsors/blacksmith.svg)](https://blacksmith.sh/) |
+| OpenAI                                                            | Vercel                                                            | Blacksmith                                                                   | Convex                                                                |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| [![OpenAI](docs/assets/sponsors/openai.svg)](https://openai.com/) | [![Vercel](docs/assets/sponsors/vercel.svg)](https://vercel.com/) | [![Blacksmith](docs/assets/sponsors/blacksmith.svg)](https://blacksmith.sh/) | [![Convex](docs/assets/sponsors/convex.svg)](https://www.convex.dev/) |
 
 **订阅 (OAuth):**
-- **[Anthropic](https://www.anthropic.com/)** (Claude Pro/Max)
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-模型说明：虽然支持任何模型，但我强烈推荐 **Anthropic Pro/Max (100/200) + Opus 4.6**，因为它具有长上下文优势和更好的抗提示注入能力。参见 [入职指南](https://docs.openclaw.ai/start/onboarding)。
+模型说明：虽然支持多种提供商/模型，但为了更好的体验和更低的提示注入风险，建议优先选择你可用的最新一代强模型。参见 [入职指南](https://docs.openclaw.ai/start/onboarding)。
 
 ## 模型 (选择 + 认证)
 
@@ -76,7 +75,7 @@ openclaw gateway --port 18789 --verbose
 # 发送消息
 openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 
-# 与助手交谈 (可选传回任何已连接的渠道: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/Microsoft Teams/Matrix/Zalo/Zalo Personal/WebChat)
+# 与助手交谈 (可选传回任何已连接的渠道: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/IRC/Microsoft Teams/Matrix/Feishu/LINE/Mattermost/Nextcloud Talk/Nostr/Synology Chat/Tlon/Twitch/Zalo/Zalo Personal/WebChat)
 openclaw agent --message "Ship checklist" --thinking high
 ```
 
@@ -127,7 +126,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 ## 亮点
 
 - **[本地优先网关](https://docs.openclaw.ai/gateway)** — 会话、渠道、工具和事件的统一控制平面。
-- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, BlueBubbles (iMessage, 推荐), iMessage (legacy), Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
+- **[多渠道收件箱](https://docs.openclaw.ai/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, BlueBubbles (iMessage, 推荐), iMessage (legacy), IRC, Microsoft Teams, Matrix, Feishu, LINE, Mattermost, Nextcloud Talk, Nostr, Synology Chat, Tlon, Twitch, Zalo, Zalo Personal, WebChat, macOS, iOS/Android。
 - **[多 Agent 路由](https://docs.openclaw.ai/gateway/configuration)** — 将入站渠道/账户/对等端路由到隔离的 Agent（工作区 + 每 Agent 会话）。
 - **[语音唤醒 (Voice Wake)](https://docs.openclaw.ai/nodes/voicewake) + [交谈模式 (Talk Mode)](https://docs.openclaw.ai/nodes/talk)** — macOS/iOS/Android 上的始终在线语音，支持 ElevenLabs。
 - **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — Agent 驱动的可视化工作区，支持 [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
@@ -149,13 +148,13 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 - [媒体管道](https://docs.openclaw.ai/nodes/images): 图像/音频/视频，转录钩子，大小限制，临时文件生命周期。音频详情：[Audio](https://docs.openclaw.ai/nodes/audio)。
 
 ### 渠道
-- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams) (extension), [Matrix](https://docs.openclaw.ai/channels/matrix) (extension), [Zalo](https://docs.openclaw.ai/channels/zalo) (extension), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser) (extension), [WebChat](https://docs.openclaw.ai/web/webchat)。
-- [群组路由](https://docs.openclaw.ai/concepts/group-messages): 提及门控，回复标签，按渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
+- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [IRC](https://docs.openclaw.ai/channels/irc), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams), [Matrix](https://docs.openclaw.ai/channels/matrix), [Feishu](https://docs.openclaw.ai/channels/feishu), [LINE](https://docs.openclaw.ai/channels/line), [Mattermost](https://docs.openclaw.ai/channels/mattermost), [Nextcloud Talk](https://docs.openclaw.ai/channels/nextcloud-talk), [Nostr](https://docs.openclaw.ai/channels/nostr), [Synology Chat](https://docs.openclaw.ai/channels/synology-chat), [Tlon](https://docs.openclaw.ai/channels/tlon), [Twitch](https://docs.openclaw.ai/channels/twitch), [Zalo](https://docs.openclaw.ai/channels/zalo), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser), [WebChat](https://docs.openclaw.ai/web/webchat)。
+- [群组路由](https://docs.openclaw.ai/channels/group-messages): 提及门控，回复标签，按渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
 
 ### 应用 + Nodes
 - [macOS 应用](https://docs.openclaw.ai/platforms/macos): 菜单栏控制平面，[Voice Wake](https://docs.openclaw.ai/nodes/voicewake)/PTT, [Talk Mode](https://docs.openclaw.ai/nodes/talk) 覆盖层, [WebChat](https://docs.openclaw.ai/web/webchat), 调试工具, [远程网关](https://docs.openclaw.ai/gateway/remote) 控制。
-- [iOS Node](https://docs.openclaw.ai/platforms/ios): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Voice Wake](https://docs.openclaw.ai/nodes/voicewake), [Talk Mode](https://docs.openclaw.ai/nodes/talk), 摄像头, 屏幕录制, Bonjour 配对。
-- [Android Node](https://docs.openclaw.ai/platforms/android): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Talk Mode](https://docs.openclaw.ai/nodes/talk), 摄像头, 屏幕录制, 可选 SMS。
+- [iOS Node](https://docs.openclaw.ai/platforms/ios): [Canvas](https://docs.openclaw.ai/platforms/mac/canvas), [Voice Wake](https://docs.openclaw.ai/nodes/voicewake), [Talk Mode](https://docs.openclaw.ai/nodes/talk), 摄像头, 屏幕录制, Bonjour + 设备配对。
+- [Android Node](https://docs.openclaw.ai/platforms/android): Connect 标签（设置码/手动）、聊天会话、语音标签、[Canvas](https://docs.openclaw.ai/platforms/mac/canvas)、摄像头/屏幕录制，以及 Android 设备命令（通知/定位/SMS/照片/联系人/日历/运动/应用更新）。
 - [macOS Node 模式](https://docs.openclaw.ai/nodes): system.run/notify + canvas/camera 暴露。
 
 ### 工具 + 自动化
@@ -166,7 +165,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 - [技能平台](https://docs.openclaw.ai/tools/skills): 捆绑、托管和工作区技能，带安装门控 + UI。
 
 ### 运行时 + 安全
-- [渠道路由](https://docs.openclaw.ai/concepts/channel-routing), [重试策略](https://docs.openclaw.ai/concepts/retry), 和 [流式传输/分块](https://docs.openclaw.ai/concepts/streaming)。
+- [渠道路由](https://docs.openclaw.ai/channels/channel-routing), [重试策略](https://docs.openclaw.ai/concepts/retry), 和 [流式传输/分块](https://docs.openclaw.ai/concepts/streaming)。
 - [在线状态](https://docs.openclaw.ai/concepts/presence), [正在输入指示器](https://docs.openclaw.ai/concepts/typing-indicators), 和 [用量跟踪](https://docs.openclaw.ai/concepts/usage-tracking)。
 - [模型](https://docs.openclaw.ai/concepts/models), [模型故障转移](https://docs.openclaw.ai/concepts/model-failover), 和 [会话修剪](https://docs.openclaw.ai/concepts/session-pruning)。
 - [安全](https://docs.openclaw.ai/gateway/security) 和 [故障排除](https://docs.openclaw.ai/channels/troubleshooting)。
@@ -180,7 +179,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 ## 工作原理 (简述)
 
 ```
-WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBubbles / Microsoft Teams / Matrix / Zalo / Zalo Personal / WebChat
+WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBubbles / IRC / Microsoft Teams / Matrix / Feishu / LINE / Mattermost / Nextcloud Talk / Nostr / Synology Chat / Tlon / Twitch / Zalo / Zalo Personal / WebChat
                │
                ▼
 ┌───────────────────────────────┐
@@ -485,4 +484,3 @@ OpenClaw 是为 **Molty** 打造的，一只太空龙虾 AI 助手。 🦞
 特别感谢 [Mario Zechner](https://mariozechner.at/) 的支持以及他的 [pi-mono](https://github.com/badlogic/pi-mono)。
 特别感谢 Adam Doppelt 为 lobster.bot 所做的贡献。
 
-感谢所有 clawtributors：完整名单请见 [GitHub Contributors](https://github.com/openclaw/openclaw/graphs/contributors)。
