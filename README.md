@@ -4,8 +4,8 @@
 
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.png">
-        <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png" alt="OpenClaw" width="500">
+        <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.svg">
+        <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.svg" alt="OpenClaw" width="500">
     </picture>
 </p>
 
@@ -21,22 +21,63 @@
 </p>
 
 **OpenClaw** 是一个运行在您自己设备上的**个人 AI 助手**。
-它会在您已经使用的渠道上回复您（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、BlueBubbles、IRC、Microsoft Teams、Matrix、Feishu、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、Zalo Personal、WebChat）。它可以在 macOS/iOS/Android 上进行语音对话，并且能够渲染一个您可控的实时 Canvas。网关（Gateway）只是控制平面——产品本身就是这个助手。
+它会在您已经使用的渠道上回复您（WhatsApp、Telegram、Slack、Discord、Google Chat、Signal、iMessage、BlueBubbles、IRC、Microsoft Teams、Matrix、Feishu、LINE、Mattermost、Nextcloud Talk、Nostr、Synology Chat、Tlon、Twitch、Zalo、Zalo Personal、WeChat、WebChat）。它可以在 macOS/iOS/Android 上进行语音对话，并且能够渲染一个您可控的实时 Canvas。网关（Gateway）只是控制平面——产品本身就是这个助手。
 
 如果您想要一个感觉本地化、快速且永远在线的个人单用户助手，这就是您的选择。
 
-[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/start/faq) · [向导](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
+[官网](https://openclaw.ai) · [文档](https://docs.openclaw.ai) · [愿景](VISION.md) · [DeepWiki](https://deepwiki.com/openclaw/openclaw) · [入门指南](https://docs.openclaw.ai/start/getting-started) · [更新](https://docs.openclaw.ai/install/updating) · [展示](https://docs.openclaw.ai/start/showcase) · [常见问题](https://docs.openclaw.ai/help/faq) · [入职](https://docs.openclaw.ai/start/wizard) · [Nix](https://github.com/openclaw/nix-openclaw) · [Docker](https://docs.openclaw.ai/install/docker) · [Discord](https://discord.gg/clawd)
 
-首选设置方式：在终端中运行入职向导 (`openclaw onboard`)。
-向导会分步引导您完成网关、工作区、渠道和技能的配置。CLI 向导是推荐路径，适用于 **macOS, Linux, 和 Windows (通过 WSL2; 强烈推荐)**。
+首选设置方式：在终端中运行 `openclaw onboard`。
+OpenClaw Onboard 会分步引导您完成网关、工作区、渠道和技能的配置。这是推荐的 CLI 设置路径，适用于 **macOS、Linux 和 Windows（通过 WSL2，强烈推荐）**。
 支持使用 npm, pnpm, 或 bun。
 新安装？从这里开始：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
 ## 赞助商
 
-| OpenAI                                                            | Vercel                                                            | Blacksmith                                                                   | Convex                                                                |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [![OpenAI](docs/assets/sponsors/openai.svg)](https://openai.com/) | [![Vercel](docs/assets/sponsors/vercel.svg)](https://vercel.com/) | [![Blacksmith](docs/assets/sponsors/blacksmith.svg)](https://blacksmith.sh/) | [![Convex](docs/assets/sponsors/convex.svg)](https://www.convex.dev/) |
+<table>
+  <tr>
+    <td align="center" width="20%">
+      <a href="https://openai.com/">
+        <picture>
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/openai-light.svg">
+          <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/openai.svg" alt="OpenAI" height="28">
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://www.nvidia.com/">
+        <picture>
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/nvidia.svg">
+          <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/nvidia-dark.svg" alt="NVIDIA" height="28">
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://vercel.com/">
+        <picture>
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/vercel-light.svg">
+          <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/vercel.svg" alt="Vercel" height="24">
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://blacksmith.sh/">
+        <picture>
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/blacksmith-light.svg">
+          <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/blacksmith.svg" alt="Blacksmith" height="28">
+        </picture>
+      </a>
+    </td>
+    <td align="center" width="20%">
+      <a href="https://www.convex.dev/">
+        <picture>
+          <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/convex-light.svg">
+          <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/sponsors/convex.svg" alt="Convex" height="24">
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
 
 **订阅 (OAuth):**
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
@@ -50,7 +91,7 @@
 
 ## 安装 (推荐)
 
-运行环境：**Node ≥22**。
+运行环境：**Node 24（推荐）或 Node 22.16+**。
 
 ```bash
 npm install -g openclaw@latest
@@ -59,11 +100,11 @@ npm install -g openclaw@latest
 openclaw onboard --install-daemon
 ```
 
-向导会安装网关守护进程（launchd/systemd 用户服务），使其保持运行。
+OpenClaw Onboard 会安装网关守护进程（launchd/systemd 用户服务），使其保持运行。
 
 ## 快速开始 (简版)
 
-运行环境：**Node ≥22**。
+运行环境：**Node 24（推荐）或 Node 22.16+**。
 
 完整新手指南（认证、配对、渠道）：[入门指南](https://docs.openclaw.ai/start/getting-started)
 
@@ -75,7 +116,7 @@ openclaw gateway --port 18789 --verbose
 # 发送消息
 openclaw message send --to +1234567890 --message "Hello from OpenClaw"
 
-# 与助手交谈 (可选传回任何已连接的渠道: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/IRC/Microsoft Teams/Matrix/Feishu/LINE/Mattermost/Nextcloud Talk/Nostr/Synology Chat/Tlon/Twitch/Zalo/Zalo Personal/WebChat)
+# 与助手交谈 (可选传回任何已连接的渠道: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/BlueBubbles/IRC/Microsoft Teams/Matrix/Feishu/LINE/Mattermost/Nextcloud Talk/Nostr/Synology Chat/Tlon/Twitch/Zalo/Zalo Personal/WeChat/WebChat)
 openclaw agent --message "Ship checklist" --thinking high
 ```
 
@@ -104,7 +145,7 @@ pnpm build
 
 pnpm openclaw onboard --install-daemon
 
-# 开发循环 (TS 变更自动重载)
+# 开发循环（源码/配置变更自动重载）
 pnpm gateway:watch
 ```
 
@@ -132,7 +173,7 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 - **[Live Canvas](https://docs.openclaw.ai/platforms/mac/canvas)** — Agent 驱动的可视化工作区，支持 [A2UI](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
 - **[一流工具支持](https://docs.openclaw.ai/tools)** — 浏览器, Canvas, Nodes, Cron, Sessions 以及 Discord/Slack 动作。
 - **[配套应用](https://docs.openclaw.ai/platforms/macos)** — macOS 菜单栏应用 + iOS/Android [Nodes](https://docs.openclaw.ai/nodes)。
-- **[入职向导](https://docs.openclaw.ai/start/wizard) + [技能](https://docs.openclaw.ai/tools/skills)** — 向导式设置，支持捆绑/托管/工作区技能。
+- **[入职](https://docs.openclaw.ai/start/wizard) + [技能](https://docs.openclaw.ai/tools/skills)** — 以 Onboard 为中心的设置流程，支持捆绑/托管/工作区技能。
 
 ## Star History
 
@@ -142,13 +183,13 @@ OpenClaw 连接到某些真实的消息平台。请将入站私信 (DM) 视为 *
 
 ### 核心平台
 - [网关 WS 控制平面](https://docs.openclaw.ai/gateway) 含会话、在线状态、配置、Cron、Webhooks、[控制 UI](https://docs.openclaw.ai/web) 和 [Canvas 主机](https://docs.openclaw.ai/platforms/mac/canvas#canvas-a2ui)。
-- [CLI 界面](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [wizard](https://docs.openclaw.ai/start/wizard), 和 [doctor](https://docs.openclaw.ai/gateway/doctor)。
+- [CLI 界面](https://docs.openclaw.ai/tools/agent-send): gateway, agent, send, [onboarding](https://docs.openclaw.ai/start/wizard), 和 [doctor](https://docs.openclaw.ai/gateway/doctor)。
 - [Pi agent 运行时](https://docs.openclaw.ai/concepts/agent) RPC 模式，支持工具流式传输和块流式传输。
 - [会话模型](https://docs.openclaw.ai/concepts/session): `main` 用于直接聊天，群组隔离，激活模式，队列模式，回复。群组规则：[Groups](https://docs.openclaw.ai/concepts/groups)。
 - [媒体管道](https://docs.openclaw.ai/nodes/images): 图像/音频/视频，转录钩子，大小限制，临时文件生命周期。音频详情：[Audio](https://docs.openclaw.ai/nodes/audio)。
 
 ### 渠道
-- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [IRC](https://docs.openclaw.ai/channels/irc), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams), [Matrix](https://docs.openclaw.ai/channels/matrix), [Feishu](https://docs.openclaw.ai/channels/feishu), [LINE](https://docs.openclaw.ai/channels/line), [Mattermost](https://docs.openclaw.ai/channels/mattermost), [Nextcloud Talk](https://docs.openclaw.ai/channels/nextcloud-talk), [Nostr](https://docs.openclaw.ai/channels/nostr), [Synology Chat](https://docs.openclaw.ai/channels/synology-chat), [Tlon](https://docs.openclaw.ai/channels/tlon), [Twitch](https://docs.openclaw.ai/channels/twitch), [Zalo](https://docs.openclaw.ai/channels/zalo), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser), [WebChat](https://docs.openclaw.ai/web/webchat)。
+- [渠道](https://docs.openclaw.ai/channels): [WhatsApp](https://docs.openclaw.ai/channels/whatsapp) (Baileys), [Telegram](https://docs.openclaw.ai/channels/telegram) (grammY), [Slack](https://docs.openclaw.ai/channels/slack) (Bolt), [Discord](https://docs.openclaw.ai/channels/discord) (discord.js), [Google Chat](https://docs.openclaw.ai/channels/googlechat) (Chat API), [Signal](https://docs.openclaw.ai/channels/signal) (signal-cli), [BlueBubbles](https://docs.openclaw.ai/channels/bluebubbles) (iMessage, 推荐), [iMessage](https://docs.openclaw.ai/channels/imessage) (legacy imsg), [IRC](https://docs.openclaw.ai/channels/irc), [Microsoft Teams](https://docs.openclaw.ai/channels/msteams), [Matrix](https://docs.openclaw.ai/channels/matrix), [Feishu](https://docs.openclaw.ai/channels/feishu), [LINE](https://docs.openclaw.ai/channels/line), [Mattermost](https://docs.openclaw.ai/channels/mattermost), [Nextcloud Talk](https://docs.openclaw.ai/channels/nextcloud-talk), [Nostr](https://docs.openclaw.ai/channels/nostr), [Synology Chat](https://docs.openclaw.ai/channels/synology-chat), [Tlon](https://docs.openclaw.ai/channels/tlon), [Twitch](https://docs.openclaw.ai/channels/twitch), [Zalo](https://docs.openclaw.ai/channels/zalo), [Zalo Personal](https://docs.openclaw.ai/channels/zalouser), WeChat (`@tencent-weixin/openclaw-weixin`), [WebChat](https://docs.openclaw.ai/web/webchat)。
 - [群组路由](https://docs.openclaw.ai/channels/group-messages): 提及门控，回复标签，按渠道分块和路由。渠道规则：[Channels](https://docs.openclaw.ai/channels)。
 
 ### 应用 + Nodes
@@ -286,7 +327,7 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 - WebChat + 调试工具。
 - 通过 SSH 的远程网关控制。
 
-注意：为了让 macOS 权限在重新构建后保持不变，需要签名构建 (参见 `docs/mac/permissions.md`)。
+注意：要让 macOS 权限在重建后持续生效，需要签名构建（参见 [macOS 权限](https://docs.openclaw.ai/platforms/mac/permissions)）。
 
 ### iOS Node (可选)
 
@@ -357,7 +398,7 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 
 ### [Discord](https://docs.openclaw.ai/channels/discord)
 
-- 设置 `DISCORD_BOT_TOKEN` or `channels.discord.token` (环境变量优先)。
+- 设置 `DISCORD_BOT_TOKEN` 或 `channels.discord.token`。
 - 可选：按需设置 `commands.native`, `commands.text`, 或 `commands.useAccessGroups`, 加上 `channels.discord.allowFrom`, `channels.discord.guilds`, 或 `channels.discord.mediaMaxMb`。
 
 ```json5
@@ -374,15 +415,27 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 
 - 需要 `signal-cli` 和 `channels.signal` 配置部分。
 
-### [iMessage](https://docs.openclaw.ai/channels/imessage)
+### [BlueBubbles (iMessage)](https://docs.openclaw.ai/channels/bluebubbles)
 
-- 仅限 macOS; 信息应用必须已登录。
+- **推荐** 的 iMessage 集成方案。
+- 配置 `channels.bluebubbles.serverUrl` + `channels.bluebubbles.password` 以及 webhook (`channels.bluebubbles.webhookPath`)。
+- BlueBubbles 服务端运行在 macOS 上；Gateway 可运行在 macOS 或其他平台。
+
+### [iMessage (legacy)](https://docs.openclaw.ai/channels/imessage)
+
+- 传统 macOS-only 集成，基于 `imsg`（Messages 必须已登录）。
 - 如果设置了 `channels.imessage.groups`，它将成为群组允许列表；包含 `"*"` 以允许所有。
 
 ### [Microsoft Teams](https://docs.openclaw.ai/channels/msteams)
 
 - 配置 Teams app + Bot Framework, 然后添加 `msteams` 配置部分。
 - 通过 `msteams.allowFrom` 允许谁交谈；群组访问通过 `msteams.groupAllowFrom` 或 `msteams.groupPolicy: "open"`。
+
+### WeChat
+
+- 官方腾讯插件：[`@tencent-weixin/openclaw-weixin`](https://www.npmjs.com/package/@tencent-weixin/openclaw-weixin)（iLink Bot API）。仅支持私聊；v2.x 需要 OpenClaw `>=2026.3.22`。
+- 安装：`openclaw plugins install "@tencent-weixin/openclaw-weixin"`，然后运行 `openclaw channels login --channel openclaw-weixin` 扫码。
+- 需要安装微信 ClawBot 插件（微信 > 我 > 设置 > 插件）；腾讯会逐步放量。
 
 ### [WebChat](https://docs.openclaw.ai/web/webchat)
 
@@ -408,7 +461,7 @@ ClawHub 是一个极简的技能注册表。启用 ClawHub 后，Agent 可以自
 - [按照操作手册运行网关。](https://docs.openclaw.ai/gateway)
 - [了解控制 UI/Web 界面如何工作以及如何安全地暴露它们。](https://docs.openclaw.ai/web)
 - [通过 SSH 隧道或 tailnets 了解远程访问。](https://docs.openclaw.ai/gateway/remote)
-- [跟随入职向导流程进行引导式设置。](https://docs.openclaw.ai/start/wizard)
+- [使用 OpenClaw Onboard 进行引导式设置。](https://docs.openclaw.ai/start/wizard)
 - [通过 webhook 界面连接外部触发器。](https://docs.openclaw.ai/automation/webhook)
 - [设置 Gmail Pub/Sub 触发器。](https://docs.openclaw.ai/automation/gmail-pubsub)
 - [了解 macOS 菜单栏配套详情。](https://docs.openclaw.ai/platforms/mac/menu-bar)
